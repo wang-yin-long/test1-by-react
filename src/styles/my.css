@@ -1,0 +1,11 @@
+.my-pic{
+  width: 200px;
+  height: 200px;
+}
+.pic-sec img {
+  width: 200px;
+  height: 200px;
+  float: left;
+  padding-left: 0px;
+  transform: rotate(10deg);
+}
