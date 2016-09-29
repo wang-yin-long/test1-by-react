@@ -1,51 +1,51 @@
 [
   {
-    "picName": "1.jpg",
+    "imageName": "1.jpg",
     "title": "第1个图片",
     "desc": "第1个图片描述"
   },
   {
-    "picName": "2.jpg",
+    "imageName": "2.jpg",
     "title": "第2个图片",
     "desc": "第2个图片描述"
   },
   {
-    "picName": "3.jpg",
+    "imageName": "3.jpg",
     "title": "第3个图片",
     "desc": "第3个图片描述"
   },
   {
-    "picName": "4.jpg",
+    "imageName": "4.jpg",
     "title": "第4个图片",
     "desc": "第5个图片描述"
   },
   {
-    "picName": "6.jpg",
+    "imageName": "6.jpg",
     "title": "第6个图片",
     "desc": "第6个图片描述"
   },
   {
-    "picName": "7.jpg",
+    "imageName": "7.jpg",
     "title": "第7个图片",
     "desc": "第7个图片描述"
   },
   {
-    "picName": "8.jpg",
+    "imageName": "8.jpg",
     "title": "第8个图片",
     "desc": "第8个图片描述"
   },
   {
-    "picName": "9.jpg",
+    "imageName": "9.jpg",
     "title": "第9个图片",
     "desc": "第9个图片描述"
   },
   {
-    "picName": "10.jpg",
+    "imageName": "10.jpg",
     "title": "第10个图片",
     "desc": "第10个图片描述"
   },
   {
-    "picName": "11.jpg",
+    "imageName": "11.jpg",
     "title": "第11个图片",
     "desc": "第11个图片描述"
   }

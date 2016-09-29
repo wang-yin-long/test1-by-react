@@ -26,6 +26,10 @@ module.exports = {
         loader: 'null-loader'
       },
       {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         include: [].concat(

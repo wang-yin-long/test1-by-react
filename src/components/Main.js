@@ -4,37 +4,54 @@ require('styles/my.css');
 
 import React from 'react';
 
-let yeomanImage = require('../images/yeoman.png'),
-  mypic1 = require('../images/1.jpg'),
-  mypic2 = require('../images/2.jpg'),
-  mypic3 = require('../images/3.jpg'),
-  mypic4 = require('../images/4.jpg'),
-  mypic5 = require('../images/5.jpg'),
-  mypic6 = require('../images/6.jpg'),
-  mypic7 = require('../images/7.jpg'),
-  mypic8 = require('../images/8.jpg'),
-  picDatas = require('../datas/pics.json');
+// 获取图像数据
+var imgDatas = require('../datas/pics.json');
+
+// 图像数据转化为图像URL
+function getImgURL(imgDatasArr) {
+  for (var i = 0; i < imgDatasArr.length; i++) {
+    var oneImgData = imgDatasArr[i];
+    oneImgData.imgURL = require('../images/' + oneImgData.imageName);
+    imgDatasArr[i] = oneImgData;
+  }
+  return imgDatasArr;
+}
+imgDatas = getImgURL(imgDatas);
+
+class ImgFigure extends React.Component {
+  render() {
+    return (
+      <figure  className="img-figure">
+        <img src={this.props.data.imgURL}
+             alt={this.props.data.title}/>
+        <figcaption>
+          <h2 className="img-title">{this.props.data.title}</h2>
+        </figcaption>
+      </figure>
+    );
+  }
+}
 
 
 class AppComponent extends React.Component {
+
   render() {
+    var controllerUnits = [],
+      imgFigures = [];
+
+    imgDatas.forEach(function (value) {
+      imgFigures.push(<ImgFigure data={value}/>);
+    });
+
     return (
-      <div className="index">
-        <img src={yeomanImage} alt="Yeoman Generator"/>
-        <div className="notice">
-          Please edit <code>src/components/Main.js</code> to get started!
-        </div>
-        <section className="pic-sec">
-          <img src={mypic1}/>
-          <img src={mypic2}/>
-          <img src={mypic3}/>
-          <img src={mypic4}/>
-          <img src={mypic5}/>
-          <img src={mypic6}/>
-          <img src={mypic7}/>
-          <img src={mypic8}/>
+      <section className="stage">
+        <section className="img-sec">
+          {imgFigures}
         </section>
-      </div>
+        <nav className="controller-nav">
+          {controllerUnits}
+        </nav>
+      </section>
     );
   }
 }

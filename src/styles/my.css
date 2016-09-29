@@ -3,6 +3,7 @@
   height: 200px;
 }
 .pic-sec img {
+  margin: 5px 5px 5px 5px;
   width: 200px;
   height: 200px;
   float: left;
